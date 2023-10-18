@@ -1,0 +1,110 @@
+import { Link } from "react-router-dom";
+
+
+const Regestratoin = () => {
+  return (
+    <div>
+      <section className="py-26 bg-white">
+        <div className="container px-4 mx-auto">
+          <div className="max-w-lg mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-extrabold mb-2">
+                Regestratoin
+              </h2>
+            </div>
+            <form action="">
+              <div className="mb-6">
+                <label className="block mb-2 font-extrabold" htmlFor="name">
+                  Name
+                </label>
+                <input
+                  className="inline-block w-full p-4 leading-6 text-lg font-extrabold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded"
+                  type="text"
+                  id="email"
+                  placeholder="name"
+                  name="name"
+                />
+              </div>
+              <div className="mb-6">
+                <label className="block mb-2 font-extrabold" htmlFor="email">
+                  Email
+                </label>
+                <input
+                  className="inline-block w-full p-4 leading-6 text-lg font-extrabold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded"
+                  type="email"
+                  id="email"
+                  placeholder="email"
+                  name="email"
+                />
+              </div>
+              <div className="mb-6">
+                <label
+                  className="block mb-2 font-extrabold"
+                  htmlFor="photo url"
+                >
+                  Photo url
+                </label>
+                <input
+                  className="inline-block w-full p-4 leading-6 text-lg font-extrabold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded"
+                  type="email"
+                  id="email"
+                  placeholder="Photo url  "
+                  name="photo "
+                />
+              </div>
+              <div className="mb-6">
+                <label className="block mb-2 font-extrabold" htmlFor="password">
+                  Password
+                </label>
+                <input
+                  className="inline-block w-full p-4 leading-6 text-lg font-extrabold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded"
+                  type="password"
+                  id="password"
+                  placeholder="**********"
+                />
+              </div>
+              <div className="flex flex-wrap -mx-4 mb-6 items-center justify-between">
+                <div className="w-full lg:w-auto px-4 mb-4 lg:mb-0">
+                  <label htmlFor="remember">
+                    <input type="checkbox" id="remember" />
+                    <span className="ml-1 font-extrabold">Remember me</span>
+                  </label>
+                </div>
+                <div className="w-full lg:w-auto px-4">
+                  <a
+                    className="inline-block font-extrabold hover:underline"
+                    href="#"
+                  >
+                    Forgot your password?
+                  </a>
+                </div>
+              </div>
+              <Link>
+                <button
+                  className="inline-block w-full py-4 px-6 mb-6 text-center text-lg leading-6 text-white font-extrabold bg-indigo-800 hover:bg-indigo-900 border-3 border-indigo-900 shadow rounded transition duration-200"
+                  type="submit"
+                >
+                  Sign in
+                </button>
+              </Link>
+              <button
+                className="inline-block w-full py-4 px-6 mb-6 text-center text-lg leading-6 text-white font-extrabold bg-indigo-800 hover:bg-indigo-900 border-3 border-indigo-900 shadow rounded transition duration-200"
+                type="submit"
+              >
+                Sign in with Google
+              </button>
+              <p className="text-center font-extrabold">
+                Don't have an account?
+                <Link to="/login">
+                  <p className="text-red-500 hover:underline">Sign in</p>
+                </Link>
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Regestratoin;
