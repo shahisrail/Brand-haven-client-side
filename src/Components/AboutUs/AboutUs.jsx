@@ -1,61 +1,25 @@
 const AboutUs = () => {
   return (
-    <div className="about-us-container">
-      <section className="about-us">
-        <div className="about-us-content">
-          <h1>About Our Company</h1>
-          <p>
-            Welcome to [Your Company Name], your trusted source for quality products.
-            We're dedicated to giving you the very best of products, with a focus on
-            dependability, customer service, and uniqueness.
-          </p>
-          <p>
-            Founded in [Year of Establishment] by [Founder's Name], [Your Company Name]
-            has come a long way from its beginnings. When [Founder's Name] first started
-            out, their passion for [your company's mission] drove them to start their own
-            business.
-          </p>
-          <p>
-            We offer a wide range of products, including [mention some key product categories].
-          </p>
-          <h2>Our Mission</h2>
-          <p>
-            At [Your Company Name], our mission is to [describe your mission and values].
-            We aim to [mention any specific goals or objectives].
-          </p>
-          <h2>Why Choose Us?</h2>
-          <ul>
-            <li>High-quality products with a focus on durability and performance.</li>
-            <li>Exceptional customer service and support.</li>
-            <li>Unique and innovative product offerings.</li>
-            <li>Fast and reliable shipping.</li>
-            <li>[Add any other reasons that set you apart.]</li>
-          </ul>
-        </div>
-        <div className="about-us-image">
-          <img src="about_us_image.jpg" alt="About Us" />
-        </div>
-      </section>
-      <section className="meet-the-team">
-        <h2>Meet the Team</h2>
-        <p>
-          Behind [Your Company Name] is a team of dedicated individuals who are passionate
-          about [your industry or products]. We are committed to providing you with the best
-          products and services.
+    <div className="about-us-container flex p-16 gap-6  ">
+      <div className="flex1">
+        <img src="https://i.postimg.cc/3RQjxmr8/about2.webp" alt="" />
+      </div>
+      <div className="flex-1">
+        <h1 className="text-3xl font-bold">Our Company</h1>
+        <p className="text-2xl mt-5">
+          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+          consectetur, adipisci velit, sed quia non numquam eius modi tempora
+          incidunt ut labore et dolore magnam aliquam quaerat exercitationem
+          ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+          consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate
+          velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum
+          fugiat quo volup. Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Praesent eu nisi ac mi malesuada vestibulum. Phasellus tempor
+          nunc eleifend cursus molestie. Mauris lectus arcu, pellentesque at
+          sodales sit amet, condimentum id nunc. Donec ornare mattis suscipit.
+          Praesent fermentum accumsan vulputate.
         </p>
-        <div className="team-members">
-          <div className="team-member">
-            <img src="team_member_1.jpg" alt="Team Member 1" />
-            <h3>John Doe</h3>
-            <p>Co-Founder & CEO</p>
-          </div>
-          <div className="team-member">
-            <img src="team_member_2.jpg" alt="Team Member 2" />
-            <h3>Jane Smith</h3>
-            <p>Product Manager</p>
-          </div>
-          </div>
-      </section>
+      </div>
     </div>
   );
 };

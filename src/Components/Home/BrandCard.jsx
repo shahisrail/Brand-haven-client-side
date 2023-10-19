@@ -5,7 +5,7 @@ const BrandCard = ({ brand }) => {
   console.log(brand);
   const {id, image, brandName } = brand;
   return (
-    <NavLink to={`/details/${id}`}>
+    <NavLink to={`/details/${brandName}`}>
       <div className="card  bg-base-100 shadow-xl p-5">
         <figure>
           <img className="w-full lg:h-[250px]" src={image} alt="Shoes" />

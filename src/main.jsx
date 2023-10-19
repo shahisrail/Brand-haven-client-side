@@ -13,6 +13,7 @@ import PrivateRoute from './Layout/PrivateRoute';
 import MyCart from './Components/MyCart/MyCart';
 import AboutUs from './Components/AboutUs/AboutUs';
 import BrandDetails from './Components/BranDetails/BrandDetails';
+import Errropage from './Errropage';
 
 
 
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Rout></Rout>,
+    errorElement: <Errropage></Errropage>,
     children: [
       {
         path: "/",
@@ -52,12 +54,14 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/details/:id",
+        path: "/details/:brandName",
         element: (
           <PrivateRoute>
             <BrandDetails></BrandDetails>
           </PrivateRoute>
         ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/brand/${params.brandName}`),
       },
       {
         path: "/login",

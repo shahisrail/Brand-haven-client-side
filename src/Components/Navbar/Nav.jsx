@@ -85,7 +85,7 @@ const Nav = () => {
             {navLinks}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <a className="btn btn-ghost normal-case text-xl">BrandHaven</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
@@ -99,7 +99,6 @@ const Nav = () => {
         </label>
         {user ? (
           <>
-            
             <button
               onClick={handelSignout}
               className="btn bg-[#62C8BA] font-bold hover:bg-[#0E204D] text-white"

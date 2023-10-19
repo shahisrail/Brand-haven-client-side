@@ -1,0 +1,140 @@
+[
+  {
+    "brandName": "Amazon",
+    "brandSliders": [
+      {
+        "brandImageSliderId": 1,
+        "brandSliderImg": "https://i.postimg.cc/vZYJpJFh/images.jpg",
+        "brandSliderTitle": "Explore Amazon Deals",
+        "brandSliderDescription": "Discover amazing discounts and offers on Amazon products."
+      },
+      {
+        "brandImageSliderId": 2,
+        "brandSliderImg": "https://i.postimg.cc/gJ2rjSZH/images.jpg",
+        "brandSliderTitle": "Amazon Prime Membership",
+        "brandSliderDescription": "Get the benefits of Amazon Prime, including fast shipping and exclusive content."
+      },
+      {
+        "brandImageSliderId": 3,
+        "brandSliderImg": "https://i.postimg.cc/gcDyJQL1/download.jpg",
+        "brandSliderTitle": "Shop Electronics on Amazon",
+        "brandSliderDescription": "Find the latest electronic gadgets and accessories on Amazon."
+      }
+    ]
+  },
+  {
+    "brandName": "Walmart",
+    "brandSliders": [
+      {
+        "brandImageSliderId": 1,
+        "brandSliderImg": "https://i.postimg.cc/63q19ZB1/download.jpg",
+        "brandSliderTitle": "Walmart Rollback Savings",
+        "brandSliderDescription": "Save on everyday essentials with Walmart's rollback prices."
+      },
+      {
+        "brandImageSliderId": 2,
+        "brandSliderImg": "https://i.postimg.cc/KvfqgQ4s/images.jpg",
+        "brandSliderTitle": "Back to School Shopping",
+        "brandSliderDescription": "Get ready for school with great deals on supplies at Walmart."
+      },
+      {
+        "brandImageSliderId": 3,
+        "brandSliderImg": "https://i.postimg.cc/wTw2BvbC/download.jpg",
+        "brandSliderTitle": "Walmart Grocery Delivery",
+        "brandSliderDescription": "Shop for groceries online and have them delivered to your doorstep."
+      }
+    ]
+  },
+  {
+    "brandName": "Alibaba",
+    "brandSliders": [
+      {
+        "brandImageSliderId": 1,
+        "brandSliderImg": "https://i.postimg.cc/m24ZrZFy/download.jpg",
+        "brandSliderTitle": "Global Wholesale Marketplace",
+        "brandSliderDescription": "Connect with suppliers and manufacturers from around the world on Alibaba."
+      },
+      {
+        "brandImageSliderId": 2,
+        "brandSliderImg": "https://i.postimg.cc/sfcqp3Nc/download.png",
+        "brandSliderTitle": "Source Millions of Products",
+        "brandSliderDescription": "Find a vast range of products for your business on Alibaba's platform."
+      },
+      {
+        "brandImageSliderId": 3,
+        "brandSliderImg": "https://i.postimg.cc/htFLvd13/download.jpg",
+        "brandSliderTitle": "Alibaba Trade Assurance",
+        "brandSliderDescription": "Enjoy secure online ordering and payment protection with Alibaba Trade Assurance."
+      }
+    ]
+  },
+  {
+    "brandName": "eBay",
+    "brandSliders": [
+      {
+        "brandImageSliderId": 1,
+        "brandSliderImg": "https://i.postimg.cc/bN1Ljh7n/download.jpg",
+        "brandSliderTitle": "eBay Auctions",
+        "brandSliderDescription": "Participate in exciting online auctions on eBay."
+      },
+      {
+        "brandImageSliderId": 2,
+        "brandSliderImg": "https://i.postimg.cc/GmqFchq4/download.jpg",
+        "brandSliderTitle": "eBay Deals & Promotions",
+        "brandSliderDescription": "Find great deals and special promotions on eBay's marketplace."
+      },
+      {
+        "brandImageSliderId": 3,
+        "brandSliderImg": "https://i.postimg.cc/mgXHvpgM/download.jpg",
+        "brandSliderTitle": "eBay Mobile Shopping",
+        "brandSliderDescription": "Shop conveniently from your mobile device with the eBay app."
+      }
+    ]
+  },
+  {
+    "brandName": "Target",
+    "brandSliders": [
+      {
+        "brandImageSliderId": 1,
+        "brandSliderImg": "https://i.postimg.cc/Kvc4m7V5/download.png",
+        "brandSliderTitle": "Target Circle Rewards",
+        "brandSliderDescription": "Join Target Circle to earn rewards and save more on your purchases."
+      },
+      {
+        "brandImageSliderId": 2,
+        "brandSliderImg": "https://i.postimg.cc/Kvc4m7V5/download.png",
+        "brandSliderTitle": "Back to School at Target",
+        "brandSliderDescription": "Get ready for the school year with Target's back-to-school supplies and clothing."
+      },
+      {
+        "brandImageSliderId": 3,
+        "brandSliderImg": "https://i.postimg.cc/XvK0ZmBB/download.jpg",
+        "brandSliderTitle": "Target Grocery Delivery",
+        "brandSliderDescription": "Shop for groceries online and have them delivered with Target Same Day Delivery."
+      }
+    ]
+  },
+  {
+    "brandName": "Best Buy",
+    "brandSliders": [
+      {
+        "brandImageSliderId": 1,
+        "brandSliderImg": "https://i.postimg.cc/XYwPxFjT/download.jpg",
+        "brandSliderTitle": "Best Buy Deal of the Day",
+        "brandSliderDescription": "Discover exclusive daily deals on a wide range of products at Best Buy."
+      },
+      {
+        "brandImageSliderId": 2,
+        "brandSliderImg": "https://i.postimg.cc/HLS1453T/download.jpg",
+        "brandSliderTitle": "Best Buy Price Match Guarantee",
+        "brandSliderDescription": "Best Buy offers a price match guarantee to ensure you get the best prices."
+      },
+      {
+        "brandImageSliderId": 3,
+        "brandSliderImg": "https://i.postimg.cc/cJkP8W4H/download.jpg",
+        "brandSliderTitle": "Best Buy Tech Support",
+        "brandSliderDescription": "Get expert tech support and services at Best Buy to enhance your tech experience."
+      }
+    ]
+  }
+]

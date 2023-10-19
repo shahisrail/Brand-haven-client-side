@@ -1,0 +1,230 @@
+{
+  "Amazon": [
+    { 
+      "image": "URL to Amazon Logo",
+      "name": "Amazon Prime Membership",
+      "brandName": "Amazon",
+      "type": "Subscription",
+      "price": "$12.99/month",
+      "rating": 4.8,
+      "shortDescription": "Enjoy fast shipping, exclusive deals, and streaming with Amazon Prime."
+    },
+    {
+      "image": "https://i.postimg.cc/Yjcz6x39/81-NI0-UFz4z-L-AC-SX300-SY300-QL70-FMwebp.webp",
+      "name": "Amazon Echo Dot (4th Gen)",
+      "brandName": "Amazon",
+      "type": "Smart Speaker",
+      "price": "$49.99",
+      "rating": 4.6,
+      "shortDescription": "Control your smart home and play music with the latest Echo Dot."
+    },
+    {
+      "image": "https://i.postimg.cc/vHcmfsgc/71qp-Xci-YP1-L-AC-UY218.jpg",
+      "name": "AmazonBasics Backpack",
+      "brandName": "Amazon",
+      "type": "Backpack",
+      "price": "$29.99",
+      "rating": 4.7,
+      "shortDescription": "A durable and spacious backpack from AmazonBasics."
+    },
+    {
+      "image": "https://i.postimg.cc/ydbMzwVb/51u-Wr-HUXz-CL-AC-UY218.jpg",
+      "name": "Amazon Fire TV Stick 4K",
+      "brandName": "Amazon",
+      "type": "Streaming Device",
+      "price": "$49.99",
+      "rating": 4.9,
+      "shortDescription": "Stream 4K content and access apps with the Fire TV Stick."
+    }
+  ],
+  "Walmart": [
+    {
+      "image": "https://i.postimg.cc/0QzwQwsy/Webroot-Antivirus-Software-for-3-Devices-2-Year-Subscription-Windows-Mac-OS-Digital-Download-fd8216e5.webp",
+      "name": "Walmart+ Membership",
+      "brandName": "Walmart",
+      "type": "Subscription",
+      "price": "$12.95/month",
+      "rating": 4.7,
+      "shortDescription": "Get member prices, free delivery, and more with Walmart+."
+    },
+    {
+      "image": "https://i.postimg.cc/gjYbsv2Y/71-TV4-ID6-NZL-AC-UL320.jpg",
+      "name": "Walmart Patio Furniture Set",
+      "brandName": "Walmart",
+      "type": "Furniture",
+      "price": "$249.99",
+      "rating": 4.5,
+      "shortDescription": "Upgrade your outdoor space with this patio furniture set from Walmart."
+    },
+    {
+      "image": "https://i.postimg.cc/Z5PFtpbk/71-Ot-OOXYa-L-AC-UY218.jpg",
+      "name": "Walmart Laptop",
+      "brandName": "Walmart",
+      "type": "Laptop",
+      "price": "$549.99",
+      "rating": 4.8,
+      "shortDescription": "Powerful laptop for work and entertainment available at Walmart."
+    },
+    {
+      "image": "https://i.postimg.cc/tJtWQHb3/81be-VBqk-YSL-AC-SX300-SY300-QL70-FMwebp.webp",
+      "name": "Walmart Grocery Delivery",
+      "brandName": "Walmart",
+      "type": "Grocery Service",
+      "price": "$5.00 delivery fee",
+      "rating": 4.9,
+      "shortDescription": "Get groceries delivered to your doorstep with Walmart Grocery Delivery."
+    }
+  ],
+  "Alibaba": [
+    {
+      "image": "https://i.postimg.cc/8PSxhdn9/H2776634231964f4c9e248390e1b1383d-W-jpg-300x300.webp",
+      "name": "Alibaba Wholesale Membership",
+      "brandName": "Alibaba",
+      "type": "Wholesale Membership",
+      "price": "$23",
+      "rating": 4.6,
+      "shortDescription": "Access wholesale products, bulk discounts, and global suppliers with Alibaba Wholesale Membership."
+    },
+    {
+      "image": "https://i.postimg.cc/gjTXPc56/61t-E7-Icu-Lm-L-AC-UY218.jpg",
+      "name": "Alibaba Electronics",
+      "brandName": "Alibaba",
+      "type": "Electronics",
+      "price": "$234",
+      "rating": 4.7,
+      "shortDescription": "Find a wide range of electronics and gadgets from Alibaba suppliers."
+    },
+    {
+      "image": "https://i.postimg.cc/d3c84sZP/71-KMura8-Ik-L-AC-UL320.jpg",
+      "name": "Alibaba Fashion",
+      "brandName": "Alibaba",
+      "type": "Fashion",
+      "price": "$24",
+      "rating": 4.5,
+      "shortDescription": "Discover the latest fashion trends and clothing on Alibaba."
+    },
+    {
+      "image": "https://i.postimg.cc/T3Kp58hr/71i-D5-Ryhua-L-AC-UL320.jpg",
+      "name": "Alibaba Home Appliances",
+      "brandName": "Alibaba",
+      "type": "Home Appliances",
+      "price": "$58",
+      "rating": 4.8,
+      "shortDescription": "Shop for home appliances and household products from Alibaba suppliers."
+    }
+  ],
+  "eBay": [
+    {
+      "image": "https://i.postimg.cc/Sx4mqwCS/71-HSD-d1-QBL-AC-UY218.jpg",
+      "name": "eBay Shopping",
+      "brandName": "eBay",
+      "type": "Online Marketplace",
+      "price": "Free to use",
+      "rating": 4.6,
+      "shortDescription": "Buy and sell a wide variety of products on the eBay marketplace."
+    },
+    {
+      "image": "https://i.postimg.cc/nctyQqzT/91-WZTg7-Qx-KL-AC-UL320.jpg",
+      "name": "eBay Collector's Items",
+      "brandName": "eBay",
+      "type": "Collectibles",
+      "price": "$65",
+      "rating": 4.9,
+      "shortDescription": "Find rare collectibles and unique items on eBay's collector's corner."
+    },
+    {
+      "image": "https://i.postimg.cc/XqngnNjK/71-Yj-Y80-JWAL-AC-UL320.jpg",
+      "name": "eBay Fashion",
+      "brandName": "eBay",
+      "type": "Fashion",
+      "price": "$34",
+      "rating": 4.7,
+      "shortDescription": "Upgrade your wardrobe with the latest fashion finds on eBay."
+    },
+    {
+      "image": "https://i.postimg.cc/9Qwy5wP5/4cdf4176-a867-47d7-94bf-db6614952746-CR0-748-2000-1048-SX460-QL70.jpg",
+      "name": "eBay Electronics",
+      "brandName": "eBay",
+      "type": "Electronics",
+      "price": "$75",
+      "rating": 4.8,
+      "shortDescription": "Shop for electronics and gadgets from trusted eBay sellers."
+    }
+  ],
+  "Target": [
+    {
+      "image": "https://i.postimg.cc/Y2V9cnd0/81-SPIPl-EG6-L-AC-UL320.jpg",
+      "name": "Target REDcard",
+      "brandName": "Target",
+      "type": "Store Credit Card",
+      "price": "Free to apply",
+      "rating": 4.7,
+      "shortDescription": "Get 5% off every day and free shipping with the Target REDcard."
+    },
+    {
+      "image": "https://i.postimg.cc/4nksY001/61wd-XEj-Qb-XL-AC-UL320.jpg",
+      "name": "Target Furniture",
+      "brandName": "Target",
+      "type": "Furniture",
+      "price": "$23",
+      "rating": 4.6,
+      "shortDescription": "Furnish your home with stylish and affordable furniture from Target."
+    },
+    {
+      "image": "https://i.postimg.cc/8kW5Sd9b/71-GF2-Zcx14-L-AC-UL320.jpg",
+      "name": "Target Toys",
+      "brandName": "Target",
+      "type": "Toys",
+      "price": "$10",
+      "rating": 4.5,
+      "shortDescription": "Discover a wide selection of toys and games for all ages at Target."
+    },
+    {
+      "image": "https://i.postimg.cc/VNrwFmcF/91-IPu-MZIgw-L-AC-UL320.jpg",
+      "name": "Target Grocery",
+      "brandName": "Target",
+      "type": "Grocery",
+      "price": "$30",
+      "rating": 4.7,
+      "shortDescription": "Shop for groceries and household essentials at your local Target store."
+    }
+  ],
+  "Best Buy": [
+    {
+      "image": "URL to Best Buy Logo",
+      "name": "Best Buy Membership",
+      "brandName": "Best Buy",
+      "type": "Membership",
+      "price": "$199.99/year",
+      "rating": 4.8,
+      "shortDescription": "Unlock member-only deals and benefits with a Best Buy Membership."
+    },
+    {
+      "image": "URL to Best Buy Electronics image",
+      "name": "Best Buy Electronics",
+      "brandName": "Best Buy",
+      "type": "Electronics",
+      "price": "Varies",
+      "rating": 4.7,
+      "shortDescription": "Find the latest electronics, gadgets, and tech products at Best Buy."
+    },
+    {
+      "image": "URL to Best Buy Appliances image",
+      "name": "Best Buy Appliances",
+      "brandName": "Best Buy",
+      "type": "Appliances",
+      "price": "Varies",
+      "rating": 4.6,
+      "shortDescription": "Upgrade your home with high-quality appliances from Best Buy."
+    },
+    {
+      "image": "URL to Best Buy Gaming image",
+      "name": "Best Buy Gaming",
+      "brandName": "Best Buy",
+      "type": "Gaming",
+      "price": "Varies",
+      "rating": 4.8,
+      "shortDescription": "Explore the world of gaming with top titles and accessories from Best Buy."
+    }
+  ]
+}
