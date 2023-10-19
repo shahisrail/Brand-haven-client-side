@@ -1,7 +1,58 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Login = () => {
+  const { signIn, signinWithGoogle } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+  console.log(location);
+
+  const handelregestratoin = (e) => {
+    e.preventDefault();
+    console.log(e.currentTarget);
+    const form = new FormData(e.currentTarget);
+    const email = form.get("email");
+    const password = form.get("password");
+    console.log(email, password);
+    signIn(email, password)
+      .then(() => {
+        Swal.fire({
+          icon: "success",
+          title: "Login Successful",
+        });
+        navigate(location?.state ? location.state : "/");
+        //  navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        Swal.fire({
+          icon: "error",
+          title: "Oops",
+          text: error.message,
+          footer: '<a href="">Why do I have this issue?</a>',
+        });
+      });
+  }
+   const handleGoogleLogin = () => {
+     signinWithGoogle()
+       .then(() => {
+         Swal.fire({
+           icon: "success",
+           title: "Google Sign-in Successful",
+         });
+         navigate(location?.state ? location.state : "/");
+       })
+       .catch((error) => {
+         Swal.fire({
+           icon: "error",
+           title: "Google Sign-in Failed",
+           text: error.message,
+           footer: '<a href="">Why do I have this issue?</a>',
+         });
+       });
+   };
+
   return (
     <div>
       <section className="py-26 bg-white">
@@ -12,7 +63,7 @@ const Login = () => {
                 Login in
               </h2>
             </div>
-            <form action="">
+            <form onSubmit={handelregestratoin} action="">
               <div className="mb-6">
                 <label className="block mb-2 font-extrabold" htmlFor="email">
                   Email
@@ -22,6 +73,7 @@ const Login = () => {
                   type="email"
                   id="email"
                   placeholder="email"
+                  name="email"
                 />
               </div>
               <div className="mb-6">
@@ -33,6 +85,7 @@ const Login = () => {
                   type="password"
                   id="password"
                   placeholder="**********"
+                  name="password"
                 />
               </div>
               <div className="flex flex-wrap -mx-4 mb-6 items-center justify-between">
@@ -57,12 +110,7 @@ const Login = () => {
               >
                 Sign in
               </button>
-              <button
-                className="inline-block w-full py-4 px-6 mb-6 text-center text-lg leading-6 text-white font-extrabold bg-indigo-800 hover:bg-indigo-900 border-3 border-indigo-900 shadow rounded transition duration-200"
-                type="submit"
-              >
-                Sign in with Google
-              </button>
+
               <p className="text-center font-extrabold">
                 Don't have an account?
                 <Link to="/regetraoin">
@@ -70,6 +118,13 @@ const Login = () => {
                 </Link>
               </p>
             </form>
+            <button
+              onClick={handleGoogleLogin}
+              className="inline-block w-full py-4 px-6 mb-6 text-center text-lg leading-6 text-white font-extrabold bg-indigo-800 hover:bg-indigo-900 border-3 border-indigo-900 shadow rounded transition duration-200"
+              type="submit"
+            >
+              Sign in with Google
+            </button>
           </div>
         </div>
       </section>

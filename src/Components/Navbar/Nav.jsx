@@ -1,14 +1,55 @@
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Nav = () => {
+  const { user, logout } = useContext(AuthContext);
+   const handelSignout = () => {
+     logout()
+       .then(() => {
+         // logut was successful
+         Swal.fire({
+           icon: "success",
+           title: "wow great your logout",
+         });
+       })
+       .catch((error) => {
+         // An error occurred during logout
+         Swal.fire({
+           icon: "error",
+           title: "oops",
+           text: error.message,
+           footer: '<a href="">Why do I have this issue?</a>',
+         });
+       });
+  };
+  
+  const userimg =
+    user && user.photoURL ? user.photoURL : "https://i.imgur.com/6yCMVKZ.jpg";
+
+  const useName = user && user.displayName; 
+
     const navLinks = (
       <>
         <li className="bg-white">
           <NavLink to="/">Home</NavLink>
         </li>
-        <li>
-          <NavLink to="/addCart">Add product</NavLink>
-        </li>
+        {user && (
+          <li>
+            <NavLink to="/addCart">Add product</NavLink>
+          </li>
+        )}
+        {user && (
+          <li>
+            <NavLink to="/mycart">My cart</NavLink>
+          </li>
+        )}
+        {user && (
+          <li>
+            <NavLink to="/about">About us</NavLink>
+          </li>
+        )}
         <li>
           <NavLink to="/services">Service</NavLink>
         </li>
@@ -47,16 +88,32 @@ const Nav = () => {
         <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          
-        
-           {navLinks}
-       
-        
-        </ul>
+        <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <h1> {useName} </h1>
+        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+          <div className="w-10 rounded-full">
+            <img src={userimg} alt="" />
+          </div>
+        </label>
+        {user ? (
+          <>
+            
+            <button
+              onClick={handelSignout}
+              className="btn bg-[#62C8BA] font-bold hover:bg-[#0E204D] text-white"
+            >
+              Sign out
+            </button>
+          </>
+        ) : (
+          <Link to="/login">
+            <button className="btn text-white font-bold bg-[#62C8BA] hover:bg-[#0E204D]">
+              Login
+            </button>
+          </Link>
+        )}
       </div>
     </div>
   );

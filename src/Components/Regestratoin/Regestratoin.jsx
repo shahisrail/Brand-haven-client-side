@@ -1,7 +1,82 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
+import { updateProfile } from "firebase/auth";
 
 
 const Regestratoin = () => {
+ const {user,setUser,createuser, signinWithGoogle } = useContext(AuthContext);
+ const navigate = useNavigate();
+ const location = useLocation();
+  const handelregestratoin = e => {
+    e.preventDefault()
+    console.log(e.currentTarget);
+    const form = new FormData(e.currentTarget)
+    const name = form.get('name')
+    const email = form.get('email')
+    const password = form.get('password')
+    const photo = form.get("photo");
+    console.log(name, email, password, photo);
+    
+      if (
+        !/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/.test(
+          password
+        )
+      ) {
+        Swal.fire({
+          icon: "error",
+          title:
+            "Minimum Six characters, at least one letter, one number and one special character",
+        });
+        return;
+      }
+
+    createuser(email, password)
+      .then((result) => {
+        updateProfile(result.user, { displayName: name, photoURL: photo }).then(
+          () => {
+            // regetare was successful
+            Swal.fire({
+              icon: "success",
+              title: "wow great complete your regestratoin",
+            });
+            setUser({ ...user, displayName: name, photoURL: photo });
+            navigate(location?.state ? location.state : "/");
+          }
+        );
+      })
+      .catch((error) => {
+        // An error occurred during regestare
+        Swal.fire({
+          icon: "error",
+          title: "oops",
+          text: error.message,
+          footer: '<a href="">Why do I have this issue?</a>',
+        });
+      });
+  }
+   const handleGoogleLogin = () => {
+     signinWithGoogle()
+       .then(() => {
+         // regetare was successful
+
+         Swal.fire({
+           icon: "success",
+           title: "wow great complete your regestratoin",
+         });
+         navigate(location?.state ? location.state : "/");
+       })
+       .catch((error) => {
+         // An error occurred during regestare
+         Swal.fire({
+           icon: "error",
+           title: "oops",
+           text: error.message,
+           footer: '<a href="">Why do I have this issue?</a>',
+         });
+       });
+   };
   return (
     <div>
       <section className="py-26 bg-white">
@@ -12,7 +87,7 @@ const Regestratoin = () => {
                 Regestratoin
               </h2>
             </div>
-            <form action="">
+            <form onSubmit={handelregestratoin}>
               <div className="mb-6">
                 <label className="block mb-2 font-extrabold" htmlFor="name">
                   Name
@@ -38,18 +113,15 @@ const Regestratoin = () => {
                 />
               </div>
               <div className="mb-6">
-                <label
-                  className="block mb-2 font-extrabold"
-                  htmlFor="photo url"
-                >
-                  Photo url
+                <label className="block mb-2 font-extrabold" htmlFor="photo">
+                  Photo
                 </label>
                 <input
                   className="inline-block w-full p-4 leading-6 text-lg font-extrabold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded"
-                  type="email"
+                  type="photo"
                   id="email"
-                  placeholder="Photo url  "
-                  name="photo "
+                  placeholder="photo"
+                  name="photo"
                 />
               </div>
               <div className="mb-6">
@@ -60,6 +132,7 @@ const Regestratoin = () => {
                   className="inline-block w-full p-4 leading-6 text-lg font-extrabold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded"
                   type="password"
                   id="password"
+                  name="password"
                   placeholder="**********"
                 />
               </div>
@@ -79,27 +152,27 @@ const Regestratoin = () => {
                   </a>
                 </div>
               </div>
-              <Link>
-                <button
-                  className="inline-block w-full py-4 px-6 mb-6 text-center text-lg leading-6 text-white font-extrabold bg-indigo-800 hover:bg-indigo-900 border-3 border-indigo-900 shadow rounded transition duration-200"
-                  type="submit"
-                >
-                  Sign in
-                </button>
-              </Link>
+
               <button
                 className="inline-block w-full py-4 px-6 mb-6 text-center text-lg leading-6 text-white font-extrabold bg-indigo-800 hover:bg-indigo-900 border-3 border-indigo-900 shadow rounded transition duration-200"
                 type="submit"
               >
-                Sign in with Google
+                Sign in
               </button>
-              <p className="text-center font-extrabold">
-                Don't have an account?
-                <Link to="/login">
-                  <p className="text-red-500 hover:underline">Sign in</p>
-                </Link>
-              </p>
             </form>
+            <button
+              onClick={handleGoogleLogin}
+              className="inline-block w-full py-4 px-6 mb-6 text-center text-lg leading-6 text-white font-extrabold bg-indigo-800 hover:bg-indigo-900 border-3 border-indigo-900 shadow rounded transition duration-200"
+              type="submit"
+            >
+              Sign in with Google
+            </button>
+            <p className="text-center font-extrabold">
+              Don't have an account?
+              <Link to="/login">
+                <p className="text-red-500 hover:underline">Sign in</p>
+              </Link>
+            </p>
           </div>
         </div>
       </section>
