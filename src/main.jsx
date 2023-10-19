@@ -14,6 +14,7 @@ import MyCart from './Components/MyCart/MyCart';
 import AboutUs from './Components/AboutUs/AboutUs';
 import BrandDetails from './Components/BranDetails/BrandDetails';
 import Errropage from './Errropage';
+import Update from './Components/Update/Update';
 
 
 
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
       {
         path: "/regetraoin",
         element: <Regestratoin></Regestratoin>,
+      },
+      {
+        path: "/update",
+        element: <Update></Update>
       },
     ],
   },

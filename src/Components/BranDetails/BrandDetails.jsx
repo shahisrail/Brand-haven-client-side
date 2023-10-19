@@ -34,7 +34,7 @@ const BrandDetails = () => {
         key={brand.brandName}
       ></CarouselTransition>
 
-      <div className="grid grid-cols-2 gap-3 p-10">
+      <div className="grid grid-cols-3 gap-3 p-10">
         {filterdata.map((cart) => (
           <CartDetails key={cart.id} cart={cart}></CartDetails>
         ))}

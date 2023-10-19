@@ -6,7 +6,7 @@ export function CarouselTransition({ brand }) {
   console.log(brandSliders);
   return (
     <>
-      <Carousel transition={{ duration: 2 }} className="rounded-xl h-[500px]">
+      <Carousel transition={{ duration: 2 }} className="rounded-xl h-[600px]">
         <img
           src={brandSliders[0].brandSliderImg}
           alt="image 1"

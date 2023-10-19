@@ -99,6 +99,7 @@ const Nav = () => {
         </label>
         {user ? (
           <>
+            
             <button
               onClick={handelSignout}
               className="btn bg-[#62C8BA] font-bold hover:bg-[#0E204D] text-white"

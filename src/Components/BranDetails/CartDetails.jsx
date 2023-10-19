@@ -6,7 +6,7 @@ const CartDetails = ({ cart }) => {
     <div>
       <div className="card  bg-base-100 shadow-xl  mt-5 ">
         <figure>
-          <img className="h-[400px] w-[700px] p-5" src={photo} alt="Shoes" />
+          <img className="h-[400px] w-full  p-5" src={photo} alt="Shoes" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{name}</h2>
