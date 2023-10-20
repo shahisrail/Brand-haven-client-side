@@ -3,63 +3,63 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 
-const Nav = () => {
+const Nav = ({ handelDarkMode, isDarkmode }) => {
   const { user, logout } = useContext(AuthContext);
-   const handelSignout = () => {
-     logout()
-       .then(() => {
-         // logut was successful
-         Swal.fire({
-           icon: "success",
-           title: "wow great your logout",
-         });
-       })
-       .catch((error) => {
-         // An error occurred during logout
-         Swal.fire({
-           icon: "error",
-           title: "oops",
-           text: error.message,
-           footer: '<a href="">Why do I have this issue?</a>',
-         });
-       });
+  const handelSignout = () => {
+    logout()
+      .then(() => {
+        // logut was successful
+        Swal.fire({
+          icon: "success",
+          title: "wow great your logout",
+        });
+      })
+      .catch((error) => {
+        // An error occurred during logout
+        Swal.fire({
+          icon: "error",
+          title: "oops",
+          text: error.message,
+          footer: '<a href="">Why do I have this issue?</a>',
+        });
+      });
   };
-  
+
   const userimg =
     user && user.photoURL ? user.photoURL : "https://i.imgur.com/6yCMVKZ.jpg";
 
-  const useName = user && user.displayName; 
+  const useName = user && user.displayName;
 
-    const navLinks = (
-      <>
-        <li className="bg-white">
-          <NavLink to="/">Home</NavLink>
-        </li>
-        {user && (
-          <li>
-            <NavLink to="/addCart">Add product</NavLink>
-          </li>
-        )}
-        {user && (
-          <li>
-            <NavLink to="/mycart">My cart</NavLink>
-          </li>
-        )}
-        {user && (
-          <li>
-            <NavLink to="/about">About us</NavLink>
-          </li>
-        )}
+  const navLinks = (
+    <>
+      <li className="bg-white">
+        <NavLink to="/">Home</NavLink>
+      </li>
+      {user && (
         <li>
-          <NavLink to="/services">Service</NavLink>
+          <NavLink to="/addCart">Add product</NavLink>
         </li>
+      )}
+      {user && (
         <li>
-          <NavLink to="/login">Login</NavLink>
+          <NavLink to="/mycart">My cart</NavLink>
         </li>
-      </>
-    );
+      )}
+      {user && (
+        <li>
+          <NavLink to="/about">About us</NavLink>
+        </li>
+      )}
+      <li>
+        <NavLink to="/services">Service</NavLink>
+      </li>
+      <li>
+        <NavLink to="/login">Login</NavLink>
+      </li>
+    </>
+  );
   return (
-    <div className="navbar bg-base-100">
+    <div className={`navbar ${isDarkmode?"bg-black text-white":""}  `}>
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -85,7 +85,13 @@ const Nav = () => {
             {navLinks}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">BrandHaven</a> 
+        <a className="btn btn-ghost normal-case text-xl">BrandHaven</a>
+        <div>
+          <button onClick={handelDarkMode}>
+            {" "}
+            {`${isDarkmode ? "dark" : "lite"}`}{" "}
+          </button>
+        </div>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
@@ -99,7 +105,6 @@ const Nav = () => {
         </label>
         {user ? (
           <>
-            
             <button
               onClick={handelSignout}
               className="btn bg-[#62C8BA] font-bold hover:bg-[#0E204D] text-white"

@@ -1,8 +1,9 @@
-
-
-const Banner = () => {
+const Banner = ({ isDarkmode }) => {
   return (
-    <div className="hero min-h-screen bg-base-200">
+    <div
+      className={` hero min-h-screen ${isDarkmode ? "bg-black text-white" : "bg-blue-gray-100"
+      } `}
+    >
       <div className="hero-content flex-col lg:flex-row-reverse">
         <img
           src="https://i.postimg.cc/VNTTskSY/download.jpg"

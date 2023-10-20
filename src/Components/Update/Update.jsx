@@ -1,7 +1,8 @@
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
-const Update = () => {
+const   Update = () => {
   const update = useLoaderData()
   const {_id, name, brandName, rating, photo, price, description, type } = update;
   console.log(update);
@@ -28,6 +29,12 @@ const handelUpdate = (e) => {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
+     Swal.fire({
+       icon: "success",
+       title: "update suucsess",
+       text: "Something went wrong!",
+       footer: '<a href="">Why do I have this issue?</a>',
+     });
     });
 };
 

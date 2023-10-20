@@ -14,12 +14,13 @@ const Details = () => {
          "Content-Type": "application/json",
        },
        body: JSON.stringify(details),
-     });
+     })
+     
    };
 
   return (
     <>
-      <div className=" flex justify-around container mx-auto bg-base-100 shadow-xl">
+      <div className=" flex flex-col md:flex-row justify-around container mx-auto bg-base-100 shadow-xl">
         <figure className="px-10 pt-10">
           <img src={photo} className="rounded-xl" />
         </figure>

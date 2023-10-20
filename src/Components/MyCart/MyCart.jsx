@@ -8,7 +8,7 @@ const MyCart = () => {
 
   
   return (
-    <div className="grid grid-cols-2 gap-5 p-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 p-10">
       {
         mycart.map(cart=> <Mycartdetails key={cart.id} cart={cart} ></Mycartdetails>)
     }
