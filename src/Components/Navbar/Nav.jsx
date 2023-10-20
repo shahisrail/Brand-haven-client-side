@@ -51,7 +51,7 @@ const Nav = ({ handelDarkMode, isDarkmode }) => {
         </li>
       )}
       <li>
-        <NavLink to="/services">Service</NavLink>
+        <NavLink to="/service">Service</NavLink>
       </li>
       <li>
         <NavLink to="/login">Login</NavLink>

@@ -16,6 +16,7 @@ import BrandDetails from "./Components/BranDetails/BrandDetails";
 import Errropage from "./Errropage";
 import Update from "./Components/Update/Update";
 import Details from "./Components/Details/Details";
+import Service from "./Components/Service/Service";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <AboutUs></AboutUs>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/service",
+        element: (
+          <PrivateRoute>
+           <Service></Service>
           </PrivateRoute>
         ),
       },
