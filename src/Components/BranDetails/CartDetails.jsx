@@ -1,4 +1,4 @@
-import {  NavLink } from "react-router-dom";
+import {  Link, NavLink } from "react-router-dom";
 import './cartdetail.css'
 const CartDetails = ({ cart }) => {
   const {_id, name, brandName, rating, photo, price } = cart;
@@ -16,10 +16,12 @@ const CartDetails = ({ cart }) => {
           <h2 className="card-title">Rating {rating}</h2>
 
           <div className="flex justify-between">
-            <NavLink to={`/detail/${_id}`}>
+            <Link to={`/detail/${_id}`}>
               <button className="btn btn-primary btn-grad">Details</button>
-            </NavLink>
-            <button className="btn btn-primary btn-grad">Update </button>
+            </Link>
+            <Link to={`/update/${_id}`}>
+              <button className="btn btn-primary btn-grad">Update </button>
+            </Link>
           </div>
         </div>
       </div>

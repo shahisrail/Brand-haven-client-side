@@ -3,7 +3,7 @@ const AddProduct = () => {
     e.preventDefault()
     const form = e.target
     const name = form.name.value
-    const brandName = form.name.value
+    const brandName = form.brandName.value;
     const type = form.type.value
     const description = form.description.value;
     const price = form.price.value;

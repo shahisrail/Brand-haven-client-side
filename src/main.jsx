@@ -43,7 +43,7 @@ const router = createBrowserRouter([
             <MyCart></MyCart>
           </PrivateRoute>
         ),
-        loader:()=>fetch("http://localhost:5000/addtocard")
+        loader: ()=> fetch("http://localhost:5000/addtocard"),
       },
       {
         path: "/about",
@@ -72,8 +72,10 @@ const router = createBrowserRouter([
         element: <Regestratoin></Regestratoin>,
       },
       {
-        path: "/update",
+        path: "/update/:id",
         element: <Update></Update>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/cart/${params.id}`),
       },
       {
         path: "/detail/:id",
@@ -82,7 +84,7 @@ const router = createBrowserRouter([
           fetch(`http://localhost:5000/cart/${params.id}`),
       },
     ],
-  },  
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

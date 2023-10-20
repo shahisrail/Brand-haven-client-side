@@ -1,32 +1,32 @@
 [
   {
     "id": 1,
-    "image": "https://i.postimg.cc/FsGzzMhf/download.jpg",
+    "image": "https://i.postimg.cc/BQqcwbLg/52655972893.png",
     "brandName": "Amazon"
   },
   {
     "id": 2,
-    "image": "https://i.postimg.cc/V6MBcfQ0/images.jpg",
+    "image": "https://i.postimg.cc/7ZNLtPzg/images.png",
     "brandName": "Walmart"
   },
   {
     "id": 3,
-    "image": "https://i.postimg.cc/J7FDQw99/images.jpg",
+    "image": "https://i.postimg.cc/52Q38GFd/images-1.png",
     "brandName": "Alibaba"
   },
   {
     "id": 4,
-    "image": "https://i.postimg.cc/Vv4cDcN2/images.jpg",
+    "image": "https://i.postimg.cc/Vs7pRx5d/91276106326.png",
     "brandName": "eBay"
   },
   {
     "id": 5,
-    "image": "https://i.postimg.cc/PqnFpRXD/download.jpg",
+    "image": "https://i.postimg.cc/N09js6Vx/download.png",
     "brandName": "Target"
   },
   {
     "id": 6,
-    "image": "https://i.postimg.cc/DZy61VtS/images.png",
+    "image": "https://i.postimg.cc/HLqXdsSV/images-2.png",
     "brandName": "Best Buy"
   }
 ]
