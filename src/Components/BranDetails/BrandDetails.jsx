@@ -33,8 +33,6 @@ const BrandDetails = () => {
   console.log("this is filter data", filterdata);
   return (
     <div>
-     
-
       <Carousel transition={{ duration: 2 }} className="rounded-xl h-[600px]">
         <img
           src={brand?.brandSliders[0]?.brandSliderImg}
@@ -59,8 +57,10 @@ const BrandDetails = () => {
             <CartDetails key={cart.id} cart={cart}></CartDetails>
           ))
         ) : (
-          <div>
-            <h1> no data availavile</h1>
+          
+          <div >
+            <h1 className="text-center text-3xl"> no data availavile</h1>
+            <img className="w-full" src="https://i.postimg.cc/QxVnTDCY/download-5.png" alt="" />
           </div>
         )}
       </div>

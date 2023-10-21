@@ -94,7 +94,7 @@ const Nav = ({ handelDarkMode, isDarkmode }) => {
         </div>
         <a className="normal-case lg:text-xl">BrandHaven</a>
         <div>
-          <button className="ml-5" onClick={handelDarkMode}>
+          <button className="ml-5 btn" onClick={handelDarkMode}>
             {`${isDarkmode ? "dark" : "lite"}`}{" "}
           </button>
         </div>

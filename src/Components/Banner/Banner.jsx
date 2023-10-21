@@ -5,19 +5,17 @@ const Banner = ({ isDarkmode }) => {
         isDarkmode ? "bg-black text-white" : "bg-blue-gray-100"
       } `}
     >
-      <div className="hero-content flex-col lg:flex-row-reverse">
-        <img
-          src="https://i.postimg.cc/4NXxn77t/myriam-jessier-eve-I7-MOc-Smw-unsplash.jpg"
-          className="lg:w-[50%] rounded-lg shadow-2xl"
-        />
-        <div>
-          <h1 className="text-5xl font-bold">online shopping</h1>
-          <p className="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </p>
-          <button className="btn btn-primary">Get Started</button>
+      <div
+        className="hero min-h-screen"
+        style={{
+          backgroundImage: "url(https://i.postimg.cc/0NXtVHz2/3513206013.png)",
+        }}
+      >
+        <div className=""></div>
+        <div className="hero-content text-center text-neutral-content">
+          <div className="max-w-md">
+          
+          </div>
         </div>
       </div>
     </div>
