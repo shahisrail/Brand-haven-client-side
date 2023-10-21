@@ -12,15 +12,15 @@ const BrandDetails = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/cart")
+    fetch(
+      "https://assaignment-server-10-mttgxp327-shahisrail134-gmailcom.vercel.app/cart"
+    )
       .then((response) => response.json())
       .then((result) => {
         setData(result);
       });
   }, []);
   console.log(data);
- 
-  console.log( brand?.[0]?.brandSliderImg);
 
   const { brandName } = useParams();
   console.log(brandName);
@@ -33,27 +33,25 @@ const BrandDetails = () => {
   console.log("this is filter data", filterdata);
   return (
     <div>
-      {/* <CarouselTransition>  </CarouselTransition> */}
      
-        <Carousel transition={{ duration: 2 }} className="rounded-xl h-[600px]">
-          <img
-            src={brand?.brandSliders[0]?.brandSliderImg}
-            alt="image 1"
-            className="h-full w-full object-cover"
-          />
-          <img
-            src={brand?.brandSliders[1]?.brandSliderImg}
-            alt="image 2"
-            className="h-full w-full object-cover"
-          />
-          <img
-            src={brand?.brandSliders[2]?.brandSliderImg}
-            alt="image 3"
-            className="h-full w-full object-cover"
-          />
-        </Carousel>
-     
-  
+
+      <Carousel transition={{ duration: 2 }} className="rounded-xl h-[600px]">
+        <img
+          src={brand?.brandSliders[0]?.brandSliderImg}
+          alt="image 1"
+          className="h-full w-full object-cover"
+        />
+        <img
+          src={brand?.brandSliders[1]?.brandSliderImg}
+          alt="image 2"
+          className="h-full w-full object-cover"
+        />
+        <img
+          src={brand?.brandSliders[2]?.brandSliderImg}
+          alt="image 3"
+          className="h-full w-full object-cover"
+        />
+      </Carousel>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 p-10">
         {filterdata?.length ? (
@@ -62,7 +60,6 @@ const BrandDetails = () => {
           ))
         ) : (
           <div>
-            
             <h1> no data availavile</h1>
           </div>
         )}

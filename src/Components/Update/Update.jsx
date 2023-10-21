@@ -1,43 +1,53 @@
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
-
-const   Update = () => {
-  const update = useLoaderData()
-  const {_id, name, brandName, rating, photo, price, description, type } = update;
+const Update = () => {
+  const update = useLoaderData();
+  const { _id, name, brandName, rating, photo, price, description, type } =
+    update;
   console.log(update);
 
-const handelUpdate = (e) => {
-  e.preventDefault();
-  const form = e.target;
-  const name = form.name.value;
-  const brandName = form.brandName.value;
-  const type = form.type.value;
-  const description = form.description.value;
-  const price = form.price.value;
-  const rating = form.rating.value;
-  const photo = form.photo.value;
-  const updateCart = { name, brandName, type, description, price, rating, photo };
-  console.log(updateCart);
-  fetch(`http://localhost:5000/cart/${_id}`, {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(updateCart),
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data);
-     Swal.fire({
-       icon: "success",
-       title: "update suucsess",
-       text: "Something went wrong!",
-       footer: '<a href="">Why do I have this issue?</a>',
-     });
-    });
-};
-
+  const handelUpdate = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const brandName = form.brandName.value;
+    const type = form.type.value;
+    const description = form.description.value;
+    const price = form.price.value;
+    const rating = form.rating.value;
+    const photo = form.photo.value;
+    const updateCart = {
+      name,
+      brandName,
+      type,
+      description,
+      price,
+      rating,
+      photo,
+    };
+    console.log(updateCart);
+    fetch(
+      `https://assaignment-server-10-mttgxp327-shahisrail134-gmailcom.vercel.app/cart/${_id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updateCart),
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        Swal.fire({
+          icon: "success",
+          title: "update suucsess",
+          text: "Something went wrong!",
+          footer: '<a href="">Why do I have this issue?</a>',
+        });
+      });
+  };
 
   return (
     <div className="container mx-auto mt-5 ">
@@ -154,7 +164,11 @@ const handelUpdate = (e) => {
               </label>
             </div>
           </div>
-          <input type="submit" value="Update Product" className="btn btn-block" />
+          <input
+            type="submit"
+            value="Update Product"
+            className="btn btn-block"
+          />
         </form>
       </div>
     </div>

@@ -1,8 +1,8 @@
-import Swal from 'sweetalert2';
-import './mycar.css'
-const   Mycartdetails = ({ cart }) => {
-  const {_id, name, brandName, rating, photo, price, description } = cart
-  const hnadelDelete = _id => {
+import Swal from "sweetalert2";
+import "./mycar.css";
+const Mycartdetails = ({ cart }) => {
+  const { _id, name, brandName, rating, photo, price, description } = cart;
+  const hnadelDelete = (_id) => {
     console.log(_id);
     Swal.fire({
       title: "Are you sure?",
@@ -15,10 +15,12 @@ const   Mycartdetails = ({ cart }) => {
     }).then((result) => {
       if (result.isConfirmed) {
         // Swal.fire("Deleted!", "Your file has been deleted.", "success");
-        fetch(`http://localhost:5000/cart/${_id}`, {
-          method: 'DELETE',
-          
-        })
+        fetch(
+          `https://assaignment-server-10-mttgxp327-shahisrail134-gmailcom.vercel.app/cart/${_id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
@@ -26,12 +28,11 @@ const   Mycartdetails = ({ cart }) => {
               Swal.fire("Deleted!", "Your Coffee has been deleted.", "success");
               // const remaining = cart.filter(card => card._id !== _id)
               // setcart(remaining)
-             
             }
           });
       }
     });
-  }
+  };
   return (
     <div>
       <div className=" md:h-[700px] lg:h-[450px] p-5 w-full flex flex-col lg:flex-row justify-around container mx-auto bg-base-100 shadow-xl">
@@ -45,9 +46,9 @@ const   Mycartdetails = ({ cart }) => {
           <h2 className="card-title">price:{price}</h2>
           <p>{description}</p>
 
-          <button
-           onClick={()=>hnadelDelete(_id)}
-            className="btn-grad">delete</button>
+          <button onClick={() => hnadelDelete(_id)} className="btn-grad">
+            delete
+          </button>
         </div>
       </div>
     </div>

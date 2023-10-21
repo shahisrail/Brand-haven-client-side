@@ -44,7 +44,10 @@ const router = createBrowserRouter([
             <MyCart></MyCart>
           </PrivateRoute>
         ),
-        loader: ()=> fetch("http://localhost:5000/addtocard"),
+        loader: () =>
+          fetch(
+            "https://assaignment-server-10-mttgxp327-shahisrail134-gmailcom.vercel.app/addtocard"
+          ),
       },
       {
         path: "/about",
@@ -58,7 +61,7 @@ const router = createBrowserRouter([
         path: "/service",
         element: (
           <PrivateRoute>
-           <Service></Service>
+            <Service></Service>
           </PrivateRoute>
         ),
       },
@@ -68,9 +71,11 @@ const router = createBrowserRouter([
           <PrivateRoute>
             <BrandDetails></BrandDetails>
           </PrivateRoute>
-        ),  
+        ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/brand/${params.brandName}`),
+          fetch(
+            `https://assaignment-server-10-mttgxp327-shahisrail134-gmailcom.vercel.app/brand/${params.brandName}`
+          ),
       },
       {
         path: "/login",
@@ -84,13 +89,17 @@ const router = createBrowserRouter([
         path: "/update/:id",
         element: <Update></Update>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/cart/${params.id}`),
+          fetch(
+            `https://assaignment-server-10-mttgxp327-shahisrail134-gmailcom.vercel.app/cart/${params.id}`
+          ),
       },
       {
         path: "/detail/:id",
         element: <Details></Details>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/cart/${params.id}`),
+          fetch(
+            `https://assaignment-server-10-mttgxp327-shahisrail134-gmailcom.vercel.app/cart/${params.id}`
+          ),
       },
     ],
   },

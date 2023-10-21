@@ -1,42 +1,42 @@
 import Swal from "sweetalert2";
 
 const AddProduct = () => {
-  const handelSubmit = e => {
-    e.preventDefault()
-    const form = e.target
-    const name = form.name.value
+  const handelSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
     const brandName = form.brandName.value;
-    const type = form.type.value
+    const type = form.type.value;
     const description = form.description.value;
     const price = form.price.value;
     const rating = form.rating.value;
     const photo = form.photo.value;
-    const cart = { name, brandName, type, description, price, rating, photo }
+    const cart = { name, brandName, type, description, price, rating, photo };
     console.log(cart);
-    fetch(`http://localhost:5000/cart`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(cart),
-    })
+    fetch(
+      `https://assaignment-server-10-mttgxp327-shahisrail134-gmailcom.vercel.app/cart`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(cart),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
         form.reset();
-          if (data.insertedId) {
-            Swal.fire({
-              title: "Success!",
-              text: "product Added Successfully",
-              icon: "success",
-              confirmButtonText: "Cool",
-            });
-          }  
-      
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Success!",
+            text: "product Added Successfully",
+            icon: "success",
+            confirmButtonText: "Cool",
+          });
+        }
       });
-    
-
-  }
+  };
   return (
     <div className="container mx-auto mt-5 ">
       <div className="bg-[#194656] p-4 md:p-24 min-h-screen">
