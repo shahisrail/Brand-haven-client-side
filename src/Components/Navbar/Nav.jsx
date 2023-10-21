@@ -26,7 +26,9 @@ const Nav = ({ handelDarkMode, isDarkmode }) => {
   };
 
   const userimg =
-    user && user.photoURL ? user.photoURL : "https://i.imgur.com/6yCMVKZ.jpg";
+    user && user.photoURL
+      ? user.photoURL
+      : "https://i.postimg.cc/jd2TMBgB/download.png";
 
   const useName = user && user.displayName;
 
