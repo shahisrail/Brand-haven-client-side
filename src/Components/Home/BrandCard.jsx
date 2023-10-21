@@ -8,7 +8,7 @@ const BrandCard = ({ brand }) => {
     <NavLink to={`/details/${brandName}`}>
       <div className="card  bg-base-100 shadow-xl p-5">
         <figure>
-          <img className="w-full lg:h-[250px]" src={image} alt="Shoes" />
+          <img className="w-full md:h-[250px]" src={image} alt="Shoes" />
         </figure>
         <div className="card-body">
           <h2 className="card-title"> {brandName} </h2>

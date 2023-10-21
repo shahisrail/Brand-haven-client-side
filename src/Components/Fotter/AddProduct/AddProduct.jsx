@@ -44,7 +44,7 @@ const AddProduct = () => {
           Add a Product
         </h2>
         <form onSubmit={handelSubmit}>
-          <div className="md:flex mb-4  ">
+          <div className="md:flex mb-4 gap-4  ">
             <div className="form-control w-full md:w-1/2">
               <label className="label">
                 <span className="label-text text-yellow-300">Name</span>
@@ -72,7 +72,7 @@ const AddProduct = () => {
               </label>
             </div>
           </div>
-          <div className="md:flex mb-4">
+          <div className="md:flex gap-4 mb-4">
             <div className="form-control w-full md:w-1/2">
               <label className="label">
                 <span className="label-text text-yellow-300">Type</span>
@@ -102,7 +102,7 @@ const AddProduct = () => {
               </label>
             </div>
           </div>
-          <div className="md:flex mb-4">
+          <div className="md:flex gap-4 mb-4">
             <div className="form-control w-full md:w-1/2">
               <label className="label">
                 <span className="label-text text-yellow-300">Price</span>

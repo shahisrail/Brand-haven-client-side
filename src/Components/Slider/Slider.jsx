@@ -23,9 +23,7 @@ export function CarouselTransition({ brand }) {
           className="h-full w-full object-cover"
         />
       </Carousel>
-      <div>
-
-      </div>
+      
     </>
   );
 }

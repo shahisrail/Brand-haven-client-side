@@ -1,6 +1,6 @@
 const AboutUs = () => {
   return (
-    <div className="about-us-container flex flex-col md:flex-row p-16 gap-6  ">
+    <div className="about-us-container flex flex-col lg:flex-row p-16 gap-6  ">
       <div className="flex1">
         <img src="https://i.postimg.cc/3RQjxmr8/about2.webp" alt="" />
       </div>

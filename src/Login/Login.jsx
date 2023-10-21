@@ -110,13 +110,6 @@ const Login = () => {
               >
                 Sign in
               </button>
-
-              <p className="text-center font-extrabold">
-                Don't have an account?
-                <Link to="/regetraoin">
-                  <p className="text-red-500 hover:underline">Sign up</p>
-                </Link>
-              </p>
             </form>
             <button
               onClick={handleGoogleLogin}
@@ -125,6 +118,12 @@ const Login = () => {
             >
               Sign in with Google
             </button>
+            <p className="text-center font-extrabold">
+              Don't have an account?
+              <Link to="/regetraoin">
+                <p className="text-red-500 hover:underline">Sign up</p>
+              </Link>
+            </p>
           </div>
         </div>
       </section>

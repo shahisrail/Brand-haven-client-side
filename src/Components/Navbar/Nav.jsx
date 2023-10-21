@@ -59,7 +59,7 @@ const Nav = ({ handelDarkMode, isDarkmode }) => {
     </>
   );
   return (
-    <div className={`navbar ${isDarkmode?"bg-black text-white":""}  `}>
+    <div className={`navbar ${isDarkmode ? "bg-black text-white" : ""}  `}>
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -85,10 +85,16 @@ const Nav = ({ handelDarkMode, isDarkmode }) => {
             {navLinks}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">BrandHaven</a>
         <div>
-          <button onClick={handelDarkMode}>
-            {" "}
+          <img
+            className="w-[200px] h-[100px] "
+            src="https://i.postimg.cc/JhbybZZz/images.png"
+            alt=""
+          />
+        </div>
+        <a className="normal-case lg:text-xl">BrandHaven</a>
+        <div>
+          <button className="ml-5" onClick={handelDarkMode}>
             {`${isDarkmode ? "dark" : "lite"}`}{" "}
           </button>
         </div>
@@ -107,7 +113,7 @@ const Nav = ({ handelDarkMode, isDarkmode }) => {
           <>
             <button
               onClick={handelSignout}
-              className="btn bg-[#62C8BA] font-bold hover:bg-[#0E204D] text-white"
+              className="btn bg-[#62C8BA] font-bold w-[70px] lg:w-[120px] hover:bg-[#0E204D] text-white"
             >
               Sign out
             </button>

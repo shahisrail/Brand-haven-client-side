@@ -1,6 +1,9 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
 import BrandCard from "./BrandCard";
+import ServiceDetails from "../Service/ServiceDetails";
+import Service from "../Service/Service";
+import AboutUs from "../AboutUs/AboutUs";
 
 const HOme = () => {
   const brandCard = useLoaderData()
@@ -13,6 +16,9 @@ const HOme = () => {
           <BrandCard key={brand.id} brand={brand}></BrandCard>
         ))}
       </div>
+      <Service></Service>
+      <h1 className="text-3xl text-center font-semibold">About us</h1>
+      <AboutUs></AboutUs>
     </div>
   );
 };
