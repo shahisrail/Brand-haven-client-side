@@ -1,6 +1,6 @@
 import Swal from "sweetalert2";
 import "./mycar.css";
-const Mycartdetails = ({ cart }) => {
+const Mycartdetails = ({ cart, cartdata, setData }) => {
   const { _id, name, brandName, rating, photo, price, description } = cart;
   const hnadelDelete = (_id) => {
     console.log(_id);
@@ -23,11 +23,11 @@ const Mycartdetails = ({ cart }) => {
         )
           .then((res) => res.json())
           .then((data) => {
+            const remainig = cartdata?.filter((datas) => datas._id !== _id);
+            setData(remainig)
             console.log(data);
             if (data.deletedCount > 0) {
               Swal.fire("Deleted!", "Your Coffee has been deleted.", "success");
-              // const remaining = cart.filter(card => card._id !== _id)
-              // setcart(remaining)
             }
           });
       }

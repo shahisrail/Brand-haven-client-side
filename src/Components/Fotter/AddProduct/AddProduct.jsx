@@ -54,6 +54,7 @@ const AddProduct = () => {
                   type="text"
                   name="name"
                   placeholder="Name"
+                  required
                   className="input input-bordered w-full"
                 />
               </label>
@@ -66,6 +67,7 @@ const AddProduct = () => {
                 <input
                   type="text"
                   name="brandName"
+                  required
                   placeholder="Brand Name"
                   className="input input-bordered w-full"
                 />
@@ -81,6 +83,7 @@ const AddProduct = () => {
                 <input
                   type="text"
                   name="type"
+                  required
                   placeholder="Product Type"
                   className="input input-bordered w-full"
                 />
@@ -96,6 +99,7 @@ const AddProduct = () => {
                 <input
                   type="text"
                   name="description"
+                  required
                   placeholder="Description"
                   className="input input-bordered w-full"
                 />
@@ -111,6 +115,7 @@ const AddProduct = () => {
                 <input
                   type="text"
                   name="price"
+                  required
                   placeholder="Price"
                   className="input input-bordered w-full"
                 />
@@ -124,6 +129,7 @@ const AddProduct = () => {
                 <input
                   type="text"
                   name="rating"
+                  required
                   placeholder="Rating"
                   className="input input-bordered w-full"
                 />
@@ -139,6 +145,7 @@ const AddProduct = () => {
                 <input
                   type="text"
                   name="photo"
+                  required
                   placeholder="Photo URL"
                   className="input input-bordered w-full"
                 />
