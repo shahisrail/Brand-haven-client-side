@@ -32,4 +32,4 @@ different brands. The footer contains a button to add a card
 ### login regestratoin atunticatoin
 
 
-## website link :https://assaignment-10-8ee49.web.app/
+## website link :[https://assaignment-10-8ee49.web.app/](https://majestic-duckanoo-d34de8.netlify.app/)
