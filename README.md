@@ -32,6 +32,17 @@ react-router-dom and use mongoDB data vase and express cors node js.
 ## steap-7 
 ### login regestratoin atunticatoin
 
+# System Technologies Used:
+## Frontend Technologies:
+### React: Leveraged for building the dynamic and responsive user interface.
+### JavaScript: Utilized for implementing interactive functionalities and logic.
+### Tailwind CSS: Employed for crafting the UI components and styling.
+
+## Backend Technologies:
+###  Node.js: Used as the runtime environment for executing JavaScript server-side.
+### Express.js: Framework employed for developing the backend server to handle requests and responses.
+### MongoDB: Chosen as the database system for efficient data management.
+
 # How to clone and run my projects follow this steap 
 ## steap-1
 ### clone this repo and open your code editor 
