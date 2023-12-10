@@ -61,6 +61,6 @@ react-router-dom and use mongoDB data vase and express cors node js.
 ### Run your terminal this comand (nodemon index.js)
 
 
-## website link: https://majestic-duckanoo-d34de8.netlify.app/
+## website link:https://ecommercesite-assaignment.netlify.app/
 ## This server side code link: https://github.com/shahisrail/branda-haven-server-side
 
